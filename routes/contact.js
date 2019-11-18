@@ -13,12 +13,14 @@ router.get("/", (req, res, next) => {
       return console.error(err);
     } else {
       console.log(contactList);
-      /*
+      // we r trying render something that says contacts index so thie we want render
+      // we want to pass a title, want to pass a contact list array which has packtful
+      // infomraiton we got from out database.
+
       res.render("contacts/index", {
         title: "Contact List",
         contactList: contactList
       });
-      */
     }
   });
 });
