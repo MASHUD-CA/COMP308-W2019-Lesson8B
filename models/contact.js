@@ -9,9 +9,9 @@ let contactSchema = mongoose.Schema(
   },
   {
     collection: "first"
-    // collection name: First01 / first [ in mongodb we need this name]
+    // collection/table name: First01 / first [ in mongodb we need this name]
   }
 );
 
-module.exports = mongoose.model("test", contactSchema);
+module.exports = mongoose.model("contact", contactSchema);
 // database name = "comp308-w2019-lesson4b" or "test" [In mongodb we need this name]
