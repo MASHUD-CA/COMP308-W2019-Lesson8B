@@ -1,8 +1,16 @@
+// Modules for the node and express
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
+
+// Modules for Authentication
+let session = require("express-session");
+let passport = require("passport");
+let passportLocal = require("passport-local");
+let localStrategy = passportLocal.Strategy;
+let flash = require("connect-flash");
 
 // database setup
 let mongoose = require("mongoose");
@@ -32,6 +40,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../../public")));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
+
+//set-up express-session // https://www.npmjs.com/package/express-session
+app.use(
+  session({
+    secret: "SomeSecret",
+    saveUninitialized: false,
+    resave: false
+  })
+);
+
+// Initialize flash
+app.use(flash());
+
+// Initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport user configuration
+
+//create a User model
+
+//Implement a User authentication strategy
+
+// serrialize and desirialize the User Info (convert to binary conversion = serizlize, back binary to string = deserialize)
 
 app.use("/", indexRouter);
 app.use("/contact-list", contactRouter);
