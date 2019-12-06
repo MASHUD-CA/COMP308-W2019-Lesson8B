@@ -16,6 +16,16 @@ router.get("/products", indexController.displayProductsPage);
 router.get("/services", indexController.displayServicesPage);
 
 /* GET contact page. */
-router.get("/contact", indexController.displayContactPage);
+router.get("/contact", indexController.displayContactPage); // NO NEED POST FOR LOGOUT.
 
+/* GET - display the Login Page */
+router.get("/login", indexController.displayLoginPage);
+/* POST - processes the Login Page*/
+router.post("/login", indexController.processLoginPage);
+/* GET - display the USER Registration page */
+router.get("/register", indexController.displayRegisterPage);
+/*  POST - process the USER registration page*/
+router.post("/register", indexController.processRegisterPage);
+/* GET - perform the User logout  */
+router.get("/logout", indexController.performLogout);
 module.exports = router;
