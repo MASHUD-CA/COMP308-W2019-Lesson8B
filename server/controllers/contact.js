@@ -26,7 +26,8 @@ module.exports.displayContactList = (req, res, next) => {
 //Copied from contact.js under routes folder: display add page
 module.exports.displayAddPage = (req, res, next) => {
   res.render("contacts/add", {
-    title: "Add New Contact"
+    title: "Add New Contact",
+    displayName: req.user ? req.user.displayName : ""
   });
 };
 
