@@ -7,7 +7,7 @@ let contactController = require("../controllers/contact");
 
 function requireAuth(req, res, next) {
   // Check if the user logged in
-  if (!req.isAuthenticated() /* || req.user.username != "admin"*/) {
+  if (!req.isAuthenticated()) {
     return res.redirect("/login");
   }
 
