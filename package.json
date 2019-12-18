@@ -1,5 +1,5 @@
 {
-  "name": "comp308-s2019-lesson6b",
+  "name": "comp308-s2019-lesson8b",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -46,10 +46,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MASHUD-CA/COMP308-W2019-Lesson6B.git"
+    "url": "git+https://github.com/MASHUD-CA/COMP308-W2019-Lesson8B.git"
   },
   "bugs": {
-    "url": "https://github.com/MASHUD-CA/COMP308-W2019-Lesson6B/issues"
+    "url": "https://github.com/MASHUD-CA/COMP308-W2019-Lesson8B/issues"
   },
-  "homepage": "https://github.com/MASHUD-CA/COMP308-W2019-Lesson6B#readme"
+  "homepage": "https://github.com/MASHUD-CA/COMP308-W2019-Lesson8B#readme"
 }
